@@ -12,6 +12,8 @@ import java.util.List;
  * @author Artur Vasilov
  */
 public class City implements Serializable {
+    @SerializedName("id")
+    private int mId;
 
     @SerializedName("name")
     private String mName;
@@ -57,5 +59,13 @@ public class City implements Serializable {
     @Nullable
     public Wind getWind() {
         return mWind;
+    }
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int mId) {
+        this.mId = mId;
     }
 }

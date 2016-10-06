@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -94,6 +95,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         mLoadingView.showLoadingIndicator();
         Call<City> call = ApiFactory.getWeatherService().getWeather(getString(R.string.default_city));
+        Log.e("URL",call.request().url().toString());
         RetrofitCallback.execute(call,
                 city -> {
                     mCity = city;

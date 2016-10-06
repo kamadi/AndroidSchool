@@ -7,7 +7,7 @@ import android.support.v4.content.AsyncTaskLoader;
 /**
  * @author Artur Vasilov
  */
-public class StubLoader extends AsyncTaskLoader<Integer> {
+    public class StubLoader extends AsyncTaskLoader<Integer> {
 
     public StubLoader(Context context) {
         super(context);
